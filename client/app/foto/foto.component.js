@@ -12,6 +12,14 @@ var core_1 = require('@angular/core');
 var FotoComponent = (function () {
     function FotoComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], FotoComponent.prototype, "titulo", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], FotoComponent.prototype, "url", void 0);
     FotoComponent = __decorate([
         core_1.Component({
             selector: 'foto',

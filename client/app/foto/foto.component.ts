@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
 
 @Component({
     selector: 'foto',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core'
 })
 
 export class FotoComponent{
+    
+    @Input() titulo: string;
+    @Input() url: string;
     
   
 }
