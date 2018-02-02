@@ -9,21 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var foto_component_1 = require('./foto.component');
-var foto_pipe_1 = require('./foto.pipe');
-var FotoModule = (function () {
-    function FotoModule() {
+var painel_component_1 = require('./painel.component');
+var PainelModule = (function () {
+    function PainelModule() {
     }
-    FotoModule = __decorate([
+    PainelModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule],
-            declarations: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo],
-            exports: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo]
+            declarations: [painel_component_1.PainelComponent],
+            exports: [painel_component_1.PainelComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], FotoModule);
-    return FotoModule;
+    ], PainelModule);
+    return PainelModule;
 }());
-exports.FotoModule = FotoModule;
-//# sourceMappingURL=foto.module.js.map
+exports.PainelModule = PainelModule;
+//# sourceMappingURL=painel.module.js.map

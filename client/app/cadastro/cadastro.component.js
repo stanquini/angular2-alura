@@ -9,21 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var foto_component_1 = require('./foto.component');
-var foto_pipe_1 = require('./foto.pipe');
-var FotoModule = (function () {
-    function FotoModule() {
+var CadastroComponent = (function () {
+    function CadastroComponent() {
     }
-    FotoModule = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule],
-            declarations: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo],
-            exports: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo]
+    CadastroComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'cadastro',
+            templateUrl: './cadastro.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], FotoModule);
-    return FotoModule;
+    ], CadastroComponent);
+    return CadastroComponent;
 }());
-exports.FotoModule = FotoModule;
-//# sourceMappingURL=foto.module.js.map
+exports.CadastroComponent = CadastroComponent;
+//# sourceMappingURL=cadastro.component.js.map

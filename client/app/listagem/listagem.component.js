@@ -9,21 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var foto_component_1 = require('./foto.component');
-var foto_pipe_1 = require('./foto.pipe');
-var FotoModule = (function () {
-    function FotoModule() {
+var http_1 = require('@angular/http');
+var ListagemComponent = (function () {
+    function ListagemComponent(http) {
+        var _this = this;
+        this.http = http;
+        this.fotos = [];
+        http
+            .get('/v1/fotos/')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (fotos) {
+            _this.fotos = fotos;
+        }, function (erro) { return console.log(erro); });
     }
-    FotoModule = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule],
-            declarations: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo],
-            exports: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo]
+    ListagemComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'listagem',
+            templateUrl: './listagem.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], FotoModule);
-    return FotoModule;
+        __metadata('design:paramtypes', [http_1.Http])
+    ], ListagemComponent);
+    return ListagemComponent;
 }());
-exports.FotoModule = FotoModule;
-//# sourceMappingURL=foto.module.js.map
+exports.ListagemComponent = ListagemComponent;
+//# sourceMappingURL=listagem.component.js.map
