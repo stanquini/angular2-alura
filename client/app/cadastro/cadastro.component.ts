@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FotoComponent } from '../foto/foto.component';
+import { Http, Headers } from '@angular/http';
 
 @Component({
   moduleId: module.id,
@@ -7,4 +9,27 @@ import { Component } from '@angular/core';
 })
 export class CadastroComponent {
 
+  foto: FotoComponent = new FotoComponent();
+  http: Http;
+
+  constructor(http: Http ) {
+
+    this.http = http;
+  }
+
+  cadastrar() {
+    
+    event.preventDefault();
+    let headers = new Headers();
+    headers.append('Content-type', 'application/json')
+    this.http.post('v1/fotos', JSON.stringify(this.foto), { headers: headers })
+    .subscribe(
+      ()=>{
+        //Para limpar o formulario
+        this.foto = new FotoComponent();
+        console.log('OK');
+      },
+      erro => console.log(erro)
+    );
+  }
 }
