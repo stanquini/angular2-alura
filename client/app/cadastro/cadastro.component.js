@@ -11,10 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var foto_component_1 = require('../foto/foto.component');
 var http_1 = require('@angular/http');
+var forms_1 = require('@angular/forms');
 var CadastroComponent = (function () {
-    function CadastroComponent(http) {
+    function CadastroComponent(http, fb) {
         this.foto = new foto_component_1.FotoComponent();
         this.http = http;
+        this.meuForm = fb.group({
+            titulo: ['', forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.minLength(4)])],
+            url: ['', forms_1.Validators.required],
+            descricao: [''],
+        });
     }
     CadastroComponent.prototype.cadastrar = function () {
         var _this = this;
@@ -34,7 +40,7 @@ var CadastroComponent = (function () {
             selector: 'cadastro',
             templateUrl: './cadastro.component.html'
         }), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [http_1.Http, forms_1.FormBuilder])
     ], CadastroComponent);
     return CadastroComponent;
 }());

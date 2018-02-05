@@ -31,7 +31,9 @@ var AppModule = (function () {
                 foto_module_1.FotoModule,
                 http_1.HttpModule,
                 painel_module_1.PainelModule,
-                app_routes_1.routing
+                app_routes_1.routing,
+                forms_1.FormsModule,
+                forms_1.ReactiveFormsModule
             ],
             declarations: [
                 app_component_1.AppComponent,
