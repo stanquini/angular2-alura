@@ -1,3 +1,4 @@
+import { Response } from '@angular/http/src/static_response';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
@@ -29,5 +30,11 @@ export class FotoService {
     return this.http
       .get(this.url).map(res => res.json())
   }
+
+  remove(foto: FotoComponent): Observable<Response> {
+
+    return this.http.delete(this.url+'/'+foto._id);
+  }
+
 
 }
