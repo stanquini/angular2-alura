@@ -32,6 +32,7 @@ var ListagemComponent = (function () {
             novasFotos.splice(indice, 1);
             _this.fotos = novasFotos;
             _this.mensagem = 'Foto removida com sucesso';
+            /* Apagar um recurso do servidor não garante automaticamente a atualização da view para que reflita uma nova lista sem o elemento removido. Para que isso aconteça, precisamos remover o elemento da lista que alimenta o template para que ele se renderize. No entanto, para que essa estratégia funcione, é necessário criar uma nova lista e atribuí-la à propriedade fotos do componente. Como a referência mudou, o mecanismo de detecção do Angular entrará em ação e atualizará a view. */
         }, function (erro) { return console.log(erro); });
         this.mensagem = 'Não foi possível remover a foto';
     };
