@@ -3,7 +3,8 @@ import { Component, OnInit, Input } from '@angular/core'
 @Component({
   selector: 'foto',
   moduleId: module.id,
-  templateUrl: './foto.component.html'
+  templateUrl: './foto.component.html',
+  styleUrls: ['./foto.component.css']
 })
 
 export class FotoComponent{

@@ -12,14 +12,26 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var foto_component_1 = require('./foto.component');
 var foto_pipe_1 = require('./foto.pipe');
+var foto_service_1 = require('./foto.service');
 var FotoModule = (function () {
     function FotoModule() {
     }
     FotoModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule],
-            declarations: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo],
-            exports: [foto_component_1.FotoComponent, foto_pipe_1.FiltroPorTitulo]
+            imports: [
+                common_1.CommonModule
+            ],
+            declarations: [
+                foto_component_1.FotoComponent,
+                foto_pipe_1.FiltroPorTitulo
+            ],
+            exports: [
+                foto_component_1.FotoComponent,
+                foto_pipe_1.FiltroPorTitulo
+            ],
+            providers: [
+                foto_service_1.FotoService
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], FotoModule);

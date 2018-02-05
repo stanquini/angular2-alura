@@ -24,7 +24,8 @@ var FotoComponent = (function () {
         core_1.Component({
             selector: 'foto',
             moduleId: module.id,
-            templateUrl: './foto.component.html'
+            templateUrl: './foto.component.html',
+            styleUrls: ['./foto.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], FotoComponent);
