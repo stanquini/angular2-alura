@@ -12,6 +12,10 @@ var appRoutes = [
         component: cadastro_component_1.CadastroComponent
     },
     {
+        path: 'cadastro/:id',
+        component: cadastro_component_1.CadastroComponent
+    },
+    {
         path: '**',
         component: listagem_component_1.ListagemComponent
     }
