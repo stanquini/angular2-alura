@@ -10,6 +10,7 @@ import { PainelModule } from './painel/painel.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListagemComponent } from './listagem/listagem.component';
 import { routing } from './app.routes';
+import { BotaoModule } from './botao/botao.module';
 
 
 FormsModule
@@ -23,7 +24,8 @@ FormsModule
     PainelModule,
     routing,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BotaoModule
   ],
   declarations: [
     AppComponent,

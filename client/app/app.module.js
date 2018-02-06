@@ -19,6 +19,7 @@ var painel_module_1 = require('./painel/painel.module');
 var cadastro_component_1 = require('./cadastro/cadastro.component');
 var listagem_component_1 = require('./listagem/listagem.component');
 var app_routes_1 = require('./app.routes');
+var botao_module_1 = require('./botao/botao.module');
 forms_1.FormsModule;
 var AppModule = (function () {
     function AppModule() {
@@ -33,7 +34,8 @@ var AppModule = (function () {
                 painel_module_1.PainelModule,
                 app_routes_1.routing,
                 forms_1.FormsModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                botao_module_1.BotaoModule
             ],
             declarations: [
                 app_component_1.AppComponent,

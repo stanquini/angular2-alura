@@ -1,2 +1,8 @@
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li><a [routerLink]="['/cadastro']">Nova</a></li>
+      <li><a [routerLink]="['']">Home</a></li>
+    </ul>
+</nav>
 <router-outlet></router-outlet>
 <!--  A diretiva router-outlet indica o local em que os componentes carregados pelo sistema de rotas do Angular devem ser inseridos dentro de um template. Em nosso caso, como AppComponent passou a ser o primeiro componente a ser carregado em nossa aplicação, é em seu template que usamos a diretiva router-outlet. -->
